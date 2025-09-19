@@ -31,6 +31,9 @@ func main() {
 	router.DELETE("/frames/delete/:id", deleteFrameById)
 	router.PUT("frames/update/:id", updateFrameById)
 
+	//выдача статических изображений для фронтенда
+	router.Static("/images", "/var/data")
+
 	router.Run(port)
 }
 
